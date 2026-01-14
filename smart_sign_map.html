@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_af880a9509a84240e0a58b6615635204 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_af880a9509a84240e0a58b6615635204" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_af880a9509a84240e0a58b6615635204 = L.map(
+                "map_af880a9509a84240e0a58b6615635204",
+                {
+                    center: [21.028511, 105.804817],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8d9124e326287cd2c3f7f0277efcc374 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8d9124e326287cd2c3f7f0277efcc374.addTo(map_af880a9509a84240e0a58b6615635204);
+        
+    
+            var marker_cluster_f218a64c52e9bc7159be0cadc15654dd = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_f4898639aa787144ef8bff98f13e1188 = L.marker(
+                [21.028511, 105.804817],
+                {
+}
+            ).addTo(marker_cluster_f218a64c52e9bc7159be0cadc15654dd);
+        
+    
+            var icon_f955e622323c6fb25f8da28bfce88c42 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_12c06311d12931726590506c78e6bc61 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d5cb62409c8fe9458dd4e7d5aa9f0564 = $(`<div id="html_d5cb62409c8fe9458dd4e7d5aa9f0564" style="width: 100.0%; height: 100.0%;">         <b>Biển tốc độ 40</b><br>         Loại: speed • Ưu tiên: 2<br>         Mô tả: Giới hạn 40 km/h         </div>`)[0];
+                popup_12c06311d12931726590506c78e6bc61.setContent(html_d5cb62409c8fe9458dd4e7d5aa9f0564);
+            
+        
+
+        marker_f4898639aa787144ef8bff98f13e1188.bindPopup(popup_12c06311d12931726590506c78e6bc61)
+        ;
+
+        
+    
+    
+            marker_f4898639aa787144ef8bff98f13e1188.bindTooltip(
+                `<div>
+                     Biển tốc độ 40 • speed
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f4898639aa787144ef8bff98f13e1188.setIcon(icon_f955e622323c6fb25f8da28bfce88c42);
+            
+    
+            var marker_239d1de12f107605bbabfc1564aff938 = L.marker(
+                [21.03, 105.82],
+                {
+}
+            ).addTo(marker_cluster_f218a64c52e9bc7159be0cadc15654dd);
+        
+    
+            var icon_d5b2d8d0735ed255fa009cda336e5cd0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5670a862db38610a2a8662e723df74bb = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f4fdecebe07189dfb60a7b2cb9bd1810 = $(`<div id="html_f4fdecebe07189dfb60a7b2cb9bd1810" style="width: 100.0%; height: 100.0%;">         <b>Biển dừng lại</b><br>         Loại: stop • Ưu tiên: 3<br>         Mô tả: Dừng trước vạch         </div>`)[0];
+                popup_5670a862db38610a2a8662e723df74bb.setContent(html_f4fdecebe07189dfb60a7b2cb9bd1810);
+            
+        
+
+        marker_239d1de12f107605bbabfc1564aff938.bindPopup(popup_5670a862db38610a2a8662e723df74bb)
+        ;
+
+        
+    
+    
+            marker_239d1de12f107605bbabfc1564aff938.bindTooltip(
+                `<div>
+                     Biển dừng lại • stop
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_239d1de12f107605bbabfc1564aff938.setIcon(icon_d5b2d8d0735ed255fa009cda336e5cd0);
+            
+    
+            var marker_a7264cbd429c3357a0b2b105150401f8 = L.marker(
+                [21.035, 105.815],
+                {
+}
+            ).addTo(marker_cluster_f218a64c52e9bc7159be0cadc15654dd);
+        
+    
+            var icon_7c0cb122917c52d8ab9111a29fbfa39c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_67999d78e7c2e70fe321af8ba394f84b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fee0ec611b0c7ac00889e809f22af6fa = $(`<div id="html_fee0ec611b0c7ac00889e809f22af6fa" style="width: 100.0%; height: 100.0%;">         <b>Cảnh báo công trình</b><br>         Loại: warning • Ưu tiên: 2<br>         Mô tả: Đường đang sửa chữa         </div>`)[0];
+                popup_67999d78e7c2e70fe321af8ba394f84b.setContent(html_fee0ec611b0c7ac00889e809f22af6fa);
+            
+        
+
+        marker_a7264cbd429c3357a0b2b105150401f8.bindPopup(popup_67999d78e7c2e70fe321af8ba394f84b)
+        ;
+
+        
+    
+    
+            marker_a7264cbd429c3357a0b2b105150401f8.bindTooltip(
+                `<div>
+                     Cảnh báo công trình • warning
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a7264cbd429c3357a0b2b105150401f8.setIcon(icon_7c0cb122917c52d8ab9111a29fbfa39c);
+            
+    
+            var marker_ff019697dc7d6bd7a99cba027b532e0e = L.marker(
+                [21.027, 105.81],
+                {
+}
+            ).addTo(marker_cluster_f218a64c52e9bc7159be0cadc15654dd);
+        
+    
+            var icon_2975884cd2cf46d1f7a274d6d2b381d0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cd8e31229fa9c37934d51dd67613e74f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_601f5b86d6602a7b0b663c7e82bec440 = $(`<div id="html_601f5b86d6602a7b0b663c7e82bec440" style="width: 100.0%; height: 100.0%;">         <b>Cấm rẽ trái</b><br>         Loại: prohibit • Ưu tiên: 3<br>         Mô tả: Không được rẽ trái         </div>`)[0];
+                popup_cd8e31229fa9c37934d51dd67613e74f.setContent(html_601f5b86d6602a7b0b663c7e82bec440);
+            
+        
+
+        marker_ff019697dc7d6bd7a99cba027b532e0e.bindPopup(popup_cd8e31229fa9c37934d51dd67613e74f)
+        ;
+
+        
+    
+    
+            marker_ff019697dc7d6bd7a99cba027b532e0e.bindTooltip(
+                `<div>
+                     Cấm rẽ trái • prohibit
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ff019697dc7d6bd7a99cba027b532e0e.setIcon(icon_2975884cd2cf46d1f7a274d6d2b381d0);
+            
+    
+            var marker_b5b847f48994f07fb72b4e257187ec6c = L.marker(
+                [21.033, 105.805],
+                {
+}
+            ).addTo(marker_cluster_f218a64c52e9bc7159be0cadc15654dd);
+        
+    
+            var icon_6cf0c9aff83603d38bce6e6be2eeca15 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7c518a00538a217fc82bf7898b93ff68 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_558a19194a393b29d971656a1b0fd2a2 = $(`<div id="html_558a19194a393b29d971656a1b0fd2a2" style="width: 100.0%; height: 100.0%;">         <b>Đường một chiều</b><br>         Loại: direction • Ưu tiên: 1<br>         Mô tả: Lưu thông một chiều         </div>`)[0];
+                popup_7c518a00538a217fc82bf7898b93ff68.setContent(html_558a19194a393b29d971656a1b0fd2a2);
+            
+        
+
+        marker_b5b847f48994f07fb72b4e257187ec6c.bindPopup(popup_7c518a00538a217fc82bf7898b93ff68)
+        ;
+
+        
+    
+    
+            marker_b5b847f48994f07fb72b4e257187ec6c.bindTooltip(
+                `<div>
+                     Đường một chiều • direction
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b5b847f48994f07fb72b4e257187ec6c.setIcon(icon_6cf0c9aff83603d38bce6e6be2eeca15);
+            
+    
+            var marker_09944223f4f4f49ba6926c45c3eacf48 = L.marker(
+                [21.0255, 105.818],
+                {
+}
+            ).addTo(marker_cluster_f218a64c52e9bc7159be0cadc15654dd);
+        
+    
+            var icon_677b54c0ace8b2c506a296650731e1e8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_61887e27454eeaf2dd0fac65e6602a83 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_835a3540de9e70f765e19e82fd40a706 = $(`<div id="html_835a3540de9e70f765e19e82fd40a706" style="width: 100.0%; height: 100.0%;">         <b>Khu dân cư</b><br>         Loại: zone • Ưu tiên: 2<br>         Mô tả: Khu vực đông dân cư         </div>`)[0];
+                popup_61887e27454eeaf2dd0fac65e6602a83.setContent(html_835a3540de9e70f765e19e82fd40a706);
+            
+        
+
+        marker_09944223f4f4f49ba6926c45c3eacf48.bindPopup(popup_61887e27454eeaf2dd0fac65e6602a83)
+        ;
+
+        
+    
+    
+            marker_09944223f4f4f49ba6926c45c3eacf48.bindTooltip(
+                `<div>
+                     Khu dân cư • zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_09944223f4f4f49ba6926c45c3eacf48.setIcon(icon_677b54c0ace8b2c506a296650731e1e8);
+            
+    
+            var marker_e9437dad7dfa8b51ccf2f35e0c9c4feb = L.marker(
+                [21.0315, 105.812],
+                {
+}
+            ).addTo(marker_cluster_f218a64c52e9bc7159be0cadc15654dd);
+        
+    
+            var icon_ce797b013346a232cd1447ef19d23a87 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e5554f2b2f6eb14ed89a9ce72abcf87d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e37f8640e9e77109e9fd4533a31e16e8 = $(`<div id="html_e37f8640e9e77109e9fd4533a31e16e8" style="width: 100.0%; height: 100.0%;">         <b>Giao nhau nguy hiểm</b><br>         Loại: danger • Ưu tiên: 3<br>         Mô tả: Giao lộ nguy hiểm         </div>`)[0];
+                popup_e5554f2b2f6eb14ed89a9ce72abcf87d.setContent(html_e37f8640e9e77109e9fd4533a31e16e8);
+            
+        
+
+        marker_e9437dad7dfa8b51ccf2f35e0c9c4feb.bindPopup(popup_e5554f2b2f6eb14ed89a9ce72abcf87d)
+        ;
+
+        
+    
+    
+            marker_e9437dad7dfa8b51ccf2f35e0c9c4feb.bindTooltip(
+                `<div>
+                     Giao nhau nguy hiểm • danger
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e9437dad7dfa8b51ccf2f35e0c9c4feb.setIcon(icon_ce797b013346a232cd1447ef19d23a87);
+            
+    
+            marker_cluster_f218a64c52e9bc7159be0cadc15654dd.addTo(map_af880a9509a84240e0a58b6615635204);
+        
+    
+            var layer_control_29d791f2b69c77b8a16542f6e59ed711_layers = {
+                base_layers : {
+                    "esriworldimagery" : tile_layer_8d9124e326287cd2c3f7f0277efcc374,
+                },
+                overlays :  {
+                    "Bi\u1ec3n b\u00e1o" : marker_cluster_f218a64c52e9bc7159be0cadc15654dd,
+                },
+            };
+            let layer_control_29d791f2b69c77b8a16542f6e59ed711 = L.control.layers(
+                layer_control_29d791f2b69c77b8a16542f6e59ed711_layers.base_layers,
+                layer_control_29d791f2b69c77b8a16542f6e59ed711_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_af880a9509a84240e0a58b6615635204);
+
+        
+</script>
+</html>
